@@ -1,0 +1,1306 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width">
+    <title>Elenco delle partite | Fubles</title>
+    <link href="mobile.css" rel="stylesheet" type="text/css">
+  </head>
+  <body style="margin:0">
+    <div id="skeleton">
+      <div id="body">
+        <div id="content">
+          <div id="matches" style="margin:0">
+            <div class="tablet-wrapper">
+              <div >
+                <div class="navigation-bar">
+                  <span >Oggi</span>
+                  <span class="bullet-separator"></span>
+                  <span >Martedì</span>
+                </div>
+
+                <div class="match-scheduled" >
+                  <div class="box">
+                    <div class="leftPanel">
+                      <div class="time">
+                        <span class="hour" >18</span>
+                        <span class="ampm" >pm</span>
+                        <span class="minutes" >.00</span>
+                      </div>
+                      <img src="https://s3-eu-west-1.amazonaws.com/static.fubles.com/images/User/360017/avatar/879dae8f074797a46f9f2197ab53d2a8_medium.jpeg" >
+                    </div>
+                    <div class="rightPanel">
+                      <div class="title">
+                        <span >Calcio a 5</span>
+                        <!-- ko if: field.covering !=0 --><!-- /ko -->
+                      </div>
+                      <div class="structure">
+                        <!-- ko if: $data.distance -->
+                        <b >9.5 Km</b> -
+                        <!-- /ko -->
+                        <!-- ko if: $data.field -->
+                        <span class="name ellipsis" >L'amico Charly Onlus</span>
+                        <!-- /ko -->
+                      </div>
+                      <!-- ko if: $data.followed_users_objects && followed_users_objects.length --><!-- /ko -->
+
+                      <!-- ko if: $data.requires_membership --><!-- /ko -->
+                      <!-- ko if: $data.is_prepaid --><!-- /ko -->
+
+                      <!-- ko if: $data.is_free --><!-- /ko -->
+                      <!-- ko ifnot: $data.is_free -->
+                      <div class="price">
+                        <!-- ko if: is_online_payment && $data.price != 0 --><!-- /ko -->
+                        <span >€ 5.00</span>
+                      </div>
+                      <!-- /ko -->
+
+
+                      <div class="empty-spots">
+                        <!-- ko if: $data.retracted --><!-- /ko -->
+                        <!-- ko ifnot: $data.retracted -->
+                        <span class="lock-status" ></span>
+
+                        <!-- ko ifnot: $data.is_started -->
+                        <!-- ko ifnot: missing_players <= 0 && missing_benches <= 0 -->
+                        <div class="roww spots take-seat" >8</div>
+                        <!-- /ko -->
+                        <!-- /ko -->
+
+                        <!-- /ko -->
+                      </div>
+
+                      <!-- ko if: $data.me --><!-- /ko -->
+                    </div>
+                    <br style="clear:both">
+                  </div>
+                </div>
+                <!-- /ko -->
+
+                <!-- ko if: $index() == 0 || moment($root.matches()[$index() - 1].locale_start_datetime).format('DDMMYYYY') !== moment(locale_start_datetime).format('DDMMYYYY') --><!-- /ko -->
+                <!-- ko if: is_played && is_ended --><!-- /ko -->
+                <!-- ko ifnot: is_played && is_ended -->
+
+
+                <div class="match-scheduled" >
+                  <div class="box">
+                    <div class="leftPanel">
+                      <div class="time">
+                        <span class="hour" >19</span>
+                        <span class="ampm" >pm</span>
+                        <span class="minutes" >.00</span>
+                      </div>
+                      <img src="https://s3-eu-west-1.amazonaws.com/static.fubles.com/images/User/360017/avatar/879dae8f074797a46f9f2197ab53d2a8_medium.jpeg" >
+                    </div>
+                    <div class="rightPanel">
+                      <div class="title">
+                        <span >Calcio a 5</span>
+                        <!-- ko if: field.covering !=0 --><!-- /ko -->
+                      </div>
+                      <div class="structure">
+                        <!-- ko if: $data.distance -->
+                        <b >9.5 Km</b> -
+                        <!-- /ko -->
+                        <!-- ko if: $data.field -->
+                        <span class="name ellipsis" >L'amico Charly Onlus</span>
+                        <!-- /ko -->
+                      </div>
+                      <!-- ko if: $data.followed_users_objects && followed_users_objects.length -->
+                      <div class="following" >
+                        <img src="https://s3-eu-west-1.amazonaws.com/static.fubles.com/images/User/30267/avatar/original_medium.jpg" >
+                      </div>
+                      <!-- /ko -->
+
+                      <!-- ko if: $data.requires_membership --><!-- /ko -->
+                      <!-- ko if: $data.is_prepaid --><!-- /ko -->
+
+                      <!-- ko if: $data.is_free --><!-- /ko -->
+                      <!-- ko ifnot: $data.is_free -->
+                      <div class="price">
+                        <!-- ko if: is_online_payment && $data.price != 0 --><!-- /ko -->
+                        <span >€ 5.00</span>
+                      </div>
+                      <!-- /ko -->
+
+
+                      <div class="empty-spots">
+                        <!-- ko if: $data.retracted --><!-- /ko -->
+                        <!-- ko ifnot: $data.retracted -->
+                        <span class="lock-status" ></span>
+
+                        <!-- ko ifnot: $data.is_started -->
+                        <!-- ko ifnot: missing_players <= 0 && missing_benches <= 0 --><!-- /ko -->
+                        <!-- /ko -->
+
+                        <!-- /ko -->
+                      </div>
+
+                      <!-- ko if: $data.me --><!-- /ko -->
+                    </div>
+                    <br style="clear:both">
+                  </div>
+                </div>
+                <!-- /ko -->
+
+                <!-- ko if: $index() == 0 || moment($root.matches()[$index() - 1].locale_start_datetime).format('DDMMYYYY') !== moment(locale_start_datetime).format('DDMMYYYY') --><!-- /ko -->
+                <!-- ko if: is_played && is_ended --><!-- /ko -->
+                <!-- ko ifnot: is_played && is_ended -->
+
+
+                <div class="match-scheduled" >
+                  <div class="box">
+                    <div class="leftPanel">
+                      <div class="time">
+                        <span class="hour" >19</span>
+                        <span class="ampm" >pm</span>
+                        <span class="minutes" >.00</span>
+                      </div>
+                      <img src="https://s3-eu-west-1.amazonaws.com/static.fubles.com/images/User/534253/avatar/84120fe4be8fbe44a2af4ee0aba202ec_medium.jpeg" >
+                    </div>
+                    <div class="rightPanel">
+                      <div class="title">
+                        <span >Calcio a 7</span>
+                        <!-- ko if: field.covering !=0 --><!-- /ko -->
+                      </div>
+                      <div class="structure">
+                        <!-- ko if: $data.distance -->
+                        <b >5.1 Km</b> -
+                        <!-- /ko -->
+                        <!-- ko if: $data.field -->
+                        <span class="name ellipsis" >Tennis Calcetto Barona  (T.C.B.)</span>
+                        <!-- /ko -->
+                      </div>
+                      <!-- ko if: $data.followed_users_objects && followed_users_objects.length --><!-- /ko -->
+
+                      <!-- ko if: $data.requires_membership --><!-- /ko -->
+                      <!-- ko if: $data.is_prepaid --><!-- /ko -->
+
+                      <!-- ko if: $data.is_free --><!-- /ko -->
+                      <!-- ko ifnot: $data.is_free -->
+                      <div class="price">
+                        <!-- ko if: is_online_payment && $data.price != 0 --><!-- /ko -->
+                        <span >€ 7.50</span>
+                      </div>
+                      <!-- /ko -->
+
+
+                      <div class="empty-spots">
+                        <!-- ko if: $data.retracted --><!-- /ko -->
+                        <!-- ko ifnot: $data.retracted -->
+                        <span class="lock-status" >
+                          <!-- ko if: $data.locked -->
+                          <i class="ico-locked medium black"></i>
+                          <!-- /ko -->
+                          <!-- ko ifnot: $data.locked --><!-- /ko -->
+                        </span>
+
+                        <!-- ko ifnot: $data.is_started -->
+                        <!-- ko ifnot: missing_players <= 0 && missing_benches <= 0 -->
+                        <div class="roww spots take-seat green" >0 + 2</div>
+                        <!-- /ko -->
+                        <!-- /ko -->
+
+                        <!-- /ko -->
+                      </div>
+
+                      <!-- ko if: $data.me --><!-- /ko -->
+                    </div>
+                    <br style="clear:both">
+                  </div>
+                </div>
+                <!-- /ko -->
+
+                <!-- ko if: $index() == 0 || moment($root.matches()[$index() - 1].locale_start_datetime).format('DDMMYYYY') !== moment(locale_start_datetime).format('DDMMYYYY') --><!-- /ko -->
+                <!-- ko if: is_played && is_ended --><!-- /ko -->
+                <!-- ko ifnot: is_played && is_ended -->
+
+
+                <div class="match-scheduled" >
+                  <div class="box">
+                    <div class="leftPanel">
+                      <div class="time">
+                        <span class="hour" >19</span>
+                        <span class="ampm" >pm</span>
+                        <span class="minutes" >.00</span>
+                      </div>
+                      <img src="https://s3-eu-west-1.amazonaws.com/static.fubles.com/images/User/507460/avatar/73fd396482eab92295a88f7d80207d8e_medium.jpeg" >
+                    </div>
+                    <div class="rightPanel">
+                      <div class="title">
+                        <span >Calcio a 5</span>
+                        <!-- ko if: field.covering !=0 --><!-- /ko -->
+                      </div>
+                      <div class="structure">
+                        <!-- ko if: $data.distance -->
+                        <b >5.7 Km</b> -
+                        <!-- /ko -->
+                        <!-- ko if: $data.field -->
+                        <span class="name ellipsis" >AS Barona</span>
+                        <!-- /ko -->
+                      </div>
+                      <!-- ko if: $data.followed_users_objects && followed_users_objects.length --><!-- /ko -->
+
+                      <!-- ko if: $data.requires_membership --><!-- /ko -->
+                      <!-- ko if: $data.is_prepaid --><!-- /ko -->
+
+                      <!-- ko if: $data.is_free --><!-- /ko -->
+                      <!-- ko ifnot: $data.is_free -->
+                      <div class="price">
+                        <!-- ko if: is_online_payment && $data.price != 0 --><!-- /ko -->
+                        <span >€ 5.50</span>
+                      </div>
+                      <!-- /ko -->
+
+
+                      <div class="empty-spots">
+                        <!-- ko if: $data.retracted --><!-- /ko -->
+                        <!-- ko ifnot: $data.retracted -->
+                        <span class="lock-status" ></span>
+
+                        <!-- ko ifnot: $data.is_started -->
+                        <!-- ko ifnot: missing_players <= 0 && missing_benches <= 0 --><!-- /ko -->
+                        <!-- /ko -->
+
+                        <!-- /ko -->
+                      </div>
+
+                      <!-- ko if: $data.me --><!-- /ko -->
+                    </div>
+                    <br style="clear:both">
+                  </div>
+                </div>
+                <!-- /ko -->
+
+                <!-- ko if: $index() == 0 || moment($root.matches()[$index() - 1].locale_start_datetime).format('DDMMYYYY') !== moment(locale_start_datetime).format('DDMMYYYY') --><!-- /ko -->
+                <!-- ko if: is_played && is_ended --><!-- /ko -->
+                <!-- ko ifnot: is_played && is_ended -->
+
+
+                <div class="match-scheduled" >
+                  <div class="box">
+                    <div class="leftPanel">
+                      <div class="time">
+                        <span class="hour" >19</span>
+                        <span class="ampm" >pm</span>
+                        <span class="minutes" >.00</span>
+                      </div>
+                      <img src="https://s3-eu-west-1.amazonaws.com/static.fubles.com/images/User/178757/avatar/original_medium.jpg" >
+                    </div>
+                    <div class="rightPanel">
+                      <div class="title">
+                        <span >Calcio a 5</span>
+                        <!-- ko if: field.covering !=0 --><!-- /ko -->
+                      </div>
+                      <div class="structure">
+                        <!-- ko if: $data.distance -->
+                        <b >5.1 Km</b> -
+                        <!-- /ko -->
+                        <!-- ko if: $data.field -->
+                        <span class="name ellipsis" >Tennis Calcetto Barona  (T.C.B.)</span>
+                        <!-- /ko -->
+                      </div>
+                      <!-- ko if: $data.followed_users_objects && followed_users_objects.length -->
+                      <div class="following" >
+                        <img src="https://s3-eu-west-1.amazonaws.com/static.fubles.com/images/User/1555/avatar/b21ed780da66f79d495a215df46461af_medium.jpeg" >
+                      </div>
+                      <!-- /ko -->
+
+                      <!-- ko if: $data.requires_membership --><!-- /ko -->
+                      <!-- ko if: $data.is_prepaid --><!-- /ko -->
+
+                      <!-- ko if: $data.is_free --><!-- /ko -->
+                      <!-- ko ifnot: $data.is_free -->
+                      <div class="price">
+                        <!-- ko if: is_online_payment && $data.price != 0 --><!-- /ko -->
+                        <span >€ 6.50</span>
+                      </div>
+                      <!-- /ko -->
+
+
+                      <div class="empty-spots">
+                        <!-- ko if: $data.retracted --><!-- /ko -->
+                        <!-- ko ifnot: $data.retracted -->
+                        <span class="lock-status" ></span>
+
+                        <!-- ko ifnot: $data.is_started -->
+                        <!-- ko ifnot: missing_players <= 0 && missing_benches <= 0 --><!-- /ko -->
+                        <!-- /ko -->
+
+                        <!-- /ko -->
+                      </div>
+
+                      <!-- ko if: $data.me --><!-- /ko -->
+                    </div>
+                    <br style="clear:both">
+                  </div>
+                </div>
+                <!-- /ko -->
+
+                <!-- ko if: $index() == 0 || moment($root.matches()[$index() - 1].locale_start_datetime).format('DDMMYYYY') !== moment(locale_start_datetime).format('DDMMYYYY') --><!-- /ko -->
+                <!-- ko if: is_played && is_ended --><!-- /ko -->
+                <!-- ko ifnot: is_played && is_ended -->
+
+
+                <div class="match-scheduled" >
+                  <div class="box">
+                    <div class="leftPanel">
+                      <div class="time">
+                        <span class="hour" >19</span>
+                        <span class="ampm" >pm</span>
+                        <span class="minutes" >.00</span>
+                      </div>
+                      <img src="https://s3-eu-west-1.amazonaws.com/static.fubles.com/images/User/507460/avatar/73fd396482eab92295a88f7d80207d8e_medium.jpeg" >
+                    </div>
+                    <div class="rightPanel">
+                      <div class="title">
+                        <span >Calcio a 5</span>
+                        <!-- ko if: field.covering !=0 --><!-- /ko -->
+                      </div>
+                      <div class="structure">
+                        <!-- ko if: $data.distance -->
+                        <b >5.7 Km</b> -
+                        <!-- /ko -->
+                        <!-- ko if: $data.field -->
+                        <span class="name ellipsis" >AS Barona</span>
+                        <!-- /ko -->
+                      </div>
+                      <!-- ko if: $data.followed_users_objects && followed_users_objects.length --><!-- /ko -->
+
+                      <!-- ko if: $data.requires_membership --><!-- /ko -->
+                      <!-- ko if: $data.is_prepaid --><!-- /ko -->
+
+                      <!-- ko if: $data.is_free --><!-- /ko -->
+                      <!-- ko ifnot: $data.is_free -->
+                      <div class="price">
+                        <!-- ko if: is_online_payment && $data.price != 0 --><!-- /ko -->
+                        <span >€ 5.50</span>
+                      </div>
+                      <!-- /ko -->
+
+
+                      <div class="empty-spots">
+                        <!-- ko if: $data.retracted --><!-- /ko -->
+                        <!-- ko ifnot: $data.retracted -->
+                        <span class="lock-status" ></span>
+
+                        <!-- ko ifnot: $data.is_started -->
+                        <!-- ko ifnot: missing_players <= 0 && missing_benches <= 0 -->
+                        <div class="roww spots take-seat" >9</div>
+                        <!-- /ko -->
+                        <!-- /ko -->
+
+                        <!-- /ko -->
+                      </div>
+
+                      <!-- ko if: $data.me --><!-- /ko -->
+                    </div>
+                    <br style="clear:both">
+                  </div>
+                </div>
+                <!-- /ko -->
+
+                <!-- ko if: $index() == 0 || moment($root.matches()[$index() - 1].locale_start_datetime).format('DDMMYYYY') !== moment(locale_start_datetime).format('DDMMYYYY') --><!-- /ko -->
+                <!-- ko if: is_played && is_ended --><!-- /ko -->
+                <!-- ko ifnot: is_played && is_ended -->
+
+
+                <div class="match-scheduled" >
+                  <div class="box">
+                    <div class="leftPanel">
+                      <div class="time">
+                        <span class="hour" >19</span>
+                        <span class="ampm" >pm</span>
+                        <span class="minutes" >.30</span>
+                      </div>
+                      <img src="https://s3-eu-west-1.amazonaws.com/static.fubles.com/images/User/507460/avatar/73fd396482eab92295a88f7d80207d8e_medium.jpeg" >
+                    </div>
+                    <div class="rightPanel">
+                      <div class="title">
+                        <span >Calcio a 7</span>
+                        <!-- ko if: field.covering !=0 --><!-- /ko -->
+                      </div>
+                      <div class="structure">
+                        <!-- ko if: $data.distance -->
+                        <b >5.7 Km</b> -
+                        <!-- /ko -->
+                        <!-- ko if: $data.field -->
+                        <span class="name ellipsis" >AS Barona</span>
+                        <!-- /ko -->
+                      </div>
+                      <!-- ko if: $data.followed_users_objects && followed_users_objects.length --><!-- /ko -->
+
+                      <!-- ko if: $data.requires_membership --><!-- /ko -->
+                      <!-- ko if: $data.is_prepaid --><!-- /ko -->
+
+                      <!-- ko if: $data.is_free --><!-- /ko -->
+                      <!-- ko ifnot: $data.is_free -->
+                      <div class="price">
+                        <!-- ko if: is_online_payment && $data.price != 0 --><!-- /ko -->
+                        <span >€ 7.14</span>
+                      </div>
+                      <!-- /ko -->
+
+
+                      <div class="empty-spots">
+                        <!-- ko if: $data.retracted --><!-- /ko -->
+                        <!-- ko ifnot: $data.retracted -->
+                        <span class="lock-status" ></span>
+
+                        <!-- ko ifnot: $data.is_started -->
+                        <!-- ko ifnot: missing_players <= 0 && missing_benches <= 0 -->
+                        <div class="roww spots take-seat" >13</div>
+                        <!-- /ko -->
+                        <!-- /ko -->
+
+                        <!-- /ko -->
+                      </div>
+
+                      <!-- ko if: $data.me --><!-- /ko -->
+                    </div>
+                    <br style="clear:both">
+                  </div>
+                </div>
+                <!-- /ko -->
+
+                <!-- ko if: $index() == 0 || moment($root.matches()[$index() - 1].locale_start_datetime).format('DDMMYYYY') !== moment(locale_start_datetime).format('DDMMYYYY') --><!-- /ko -->
+                <!-- ko if: is_played && is_ended --><!-- /ko -->
+                <!-- ko ifnot: is_played && is_ended -->
+
+
+                <div class="match-scheduled" >
+                  <div class="box">
+                    <div class="leftPanel">
+                      <div class="time">
+                        <span class="hour" >19</span>
+                        <span class="ampm" >pm</span>
+                        <span class="minutes" >.30</span>
+                      </div>
+                      <img src="https://s3-eu-west-1.amazonaws.com/static.fubles.com/images/User/80157/avatar/original_medium.jpg" >
+                    </div>
+                    <div class="rightPanel">
+                      <div class="title">
+                        <span >Calcio a 5</span>
+                        <!-- ko if: field.covering !=0 -->
+                        <span >Indoor</span>
+                        <!-- /ko -->
+                      </div>
+                      <div class="structure">
+                        <!-- ko if: $data.distance -->
+                        <b >3 Km</b> -
+                        <!-- /ko -->
+                        <!-- ko if: $data.field -->
+                        <span class="name ellipsis" >DLF - FootballCity</span>
+                        <!-- /ko -->
+                      </div>
+                      <!-- ko if: $data.followed_users_objects && followed_users_objects.length --><!-- /ko -->
+
+                      <!-- ko if: $data.requires_membership --><!-- /ko -->
+                      <!-- ko if: $data.is_prepaid --><!-- /ko -->
+
+                      <!-- ko if: $data.is_free --><!-- /ko -->
+                      <!-- ko ifnot: $data.is_free -->
+                      <div class="price">
+                        <!-- ko if: is_online_payment && $data.price != 0 --><!-- /ko -->
+                        <span >€ 6.50</span>
+                      </div>
+                      <!-- /ko -->
+
+
+                      <div class="empty-spots">
+                        <!-- ko if: $data.retracted --><!-- /ko -->
+                        <!-- ko ifnot: $data.retracted -->
+                        <span class="lock-status" ></span>
+
+                        <!-- ko ifnot: $data.is_started -->
+                        <!-- ko ifnot: missing_players <= 0 && missing_benches <= 0 -->
+                        <div class="roww spots take-seat" >2</div>
+                        <!-- /ko -->
+                        <!-- /ko -->
+
+                        <!-- /ko -->
+                      </div>
+
+                      <!-- ko if: $data.me --><!-- /ko -->
+                    </div>
+                    <br style="clear:both">
+                  </div>
+                </div>
+                <!-- /ko -->
+
+                <!-- ko if: $index() == 0 || moment($root.matches()[$index() - 1].locale_start_datetime).format('DDMMYYYY') !== moment(locale_start_datetime).format('DDMMYYYY') --><!-- /ko -->
+                <!-- ko if: is_played && is_ended --><!-- /ko -->
+                <!-- ko ifnot: is_played && is_ended -->
+
+
+                <div class="match-scheduled" >
+                  <div class="box">
+                    <div class="leftPanel">
+                      <div class="time">
+                        <span class="hour" >20</span>
+                        <span class="ampm" >pm</span>
+                        <span class="minutes" >.00</span>
+                      </div>
+                      <img src="https://s3-eu-west-1.amazonaws.com/static.fubles.com/images/User/2728/avatar/original_medium.jpg" >
+                    </div>
+                    <div class="rightPanel">
+                      <div class="title">
+                        <span >Calcio a 7</span>
+                        <!-- ko if: field.covering !=0 --><!-- /ko -->
+                      </div>
+                      <div class="structure">
+                        <!-- ko if: $data.distance -->
+                        <b >3 Km</b> -
+                        <!-- /ko -->
+                        <!-- ko if: $data.field -->
+                        <span class="name ellipsis" >DLF - FootballCity</span>
+                        <!-- /ko -->
+                      </div>
+                      <!-- ko if: $data.followed_users_objects && followed_users_objects.length --><!-- /ko -->
+
+                      <!-- ko if: $data.requires_membership --><!-- /ko -->
+                      <!-- ko if: $data.is_prepaid --><!-- /ko -->
+
+                      <!-- ko if: $data.is_free --><!-- /ko -->
+                      <!-- ko ifnot: $data.is_free -->
+                      <div class="price">
+                        <!-- ko if: is_online_payment && $data.price != 0 --><!-- /ko -->
+                        <span >€ 8.50</span>
+                      </div>
+                      <!-- /ko -->
+
+
+                      <div class="empty-spots">
+                        <!-- ko if: $data.retracted --><!-- /ko -->
+                        <!-- ko ifnot: $data.retracted -->
+                        <span class="lock-status" >
+                          <!-- ko if: $data.locked -->
+                          <i class="ico-locked medium black"></i>
+                          <!-- /ko -->
+                          <!-- ko ifnot: $data.locked --><!-- /ko -->
+                        </span>
+
+                        <!-- ko ifnot: $data.is_started -->
+                        <!-- ko ifnot: missing_players <= 0 && missing_benches <= 0 --><!-- /ko -->
+                        <!-- /ko -->
+
+                        <!-- /ko -->
+                      </div>
+
+                      <!-- ko if: $data.me --><!-- /ko -->
+                    </div>
+                    <br style="clear:both">
+                  </div>
+                </div>
+                <!-- /ko -->
+
+                <!-- ko if: $index() == 0 || moment($root.matches()[$index() - 1].locale_start_datetime).format('DDMMYYYY') !== moment(locale_start_datetime).format('DDMMYYYY') --><!-- /ko -->
+                <!-- ko if: is_played && is_ended --><!-- /ko -->
+                <!-- ko ifnot: is_played && is_ended -->
+
+
+                <div class="match-scheduled" >
+                  <div class="box">
+                    <div class="leftPanel">
+                      <div class="time">
+                        <span class="hour" >20</span>
+                        <span class="ampm" >pm</span>
+                        <span class="minutes" >.00</span>
+                      </div>
+                      <img src="https://s3-eu-west-1.amazonaws.com/static.fubles.com/images/User/360017/avatar/879dae8f074797a46f9f2197ab53d2a8_medium.jpeg" >
+                    </div>
+                    <div class="rightPanel">
+                      <div class="title">
+                        <span >Calcio a 5</span>
+                        <!-- ko if: field.covering !=0 --><!-- /ko -->
+                      </div>
+                      <div class="structure">
+                        <!-- ko if: $data.distance -->
+                        <b >9.5 Km</b> -
+                        <!-- /ko -->
+                        <!-- ko if: $data.field -->
+                        <span class="name ellipsis" >L'amico Charly Onlus</span>
+                        <!-- /ko -->
+                      </div>
+                      <!-- ko if: $data.followed_users_objects && followed_users_objects.length --><!-- /ko -->
+
+                      <!-- ko if: $data.requires_membership --><!-- /ko -->
+                      <!-- ko if: $data.is_prepaid --><!-- /ko -->
+
+                      <!-- ko if: $data.is_free --><!-- /ko -->
+                      <!-- ko ifnot: $data.is_free -->
+                      <div class="price">
+                        <!-- ko if: is_online_payment && $data.price != 0 --><!-- /ko -->
+                        <span >€ 5.00</span>
+                      </div>
+                      <!-- /ko -->
+
+
+                      <div class="empty-spots">
+                        <!-- ko if: $data.retracted --><!-- /ko -->
+                        <!-- ko ifnot: $data.retracted -->
+                        <span class="lock-status" ></span>
+
+                        <!-- ko ifnot: $data.is_started -->
+                        <!-- ko ifnot: missing_players <= 0 && missing_benches <= 0 --><!-- /ko -->
+                        <!-- /ko -->
+
+                        <!-- /ko -->
+                      </div>
+
+                      <!-- ko if: $data.me --><!-- /ko -->
+                    </div>
+                    <br style="clear:both">
+                  </div>
+                </div>
+                <!-- /ko -->
+
+                <!-- ko if: $index() == 0 || moment($root.matches()[$index() - 1].locale_start_datetime).format('DDMMYYYY') !== moment(locale_start_datetime).format('DDMMYYYY') --><!-- /ko -->
+                <!-- ko if: is_played && is_ended --><!-- /ko -->
+                <!-- ko ifnot: is_played && is_ended -->
+
+
+                <div class="match-scheduled" >
+                  <div class="box">
+                    <div class="leftPanel">
+                      <div class="time">
+                        <span class="hour" >20</span>
+                        <span class="ampm" >pm</span>
+                        <span class="minutes" >.00</span>
+                      </div>
+                      <img src="https://s3-eu-west-1.amazonaws.com/static.fubles.com/images/User/426768/avatar/7226811b2edf69730d8d680ecf3ea2ba_medium.jpeg" >
+                    </div>
+                    <div class="rightPanel">
+                      <div class="title">
+                        <span >Calcio a 5</span>
+                        <!-- ko if: field.covering !=0 --><!-- /ko -->
+                      </div>
+                      <div class="structure">
+                        <!-- ko if: $data.distance -->
+                        <b >5.9 Km</b> -
+                        <!-- /ko -->
+                        <!-- ko if: $data.field -->
+                        <span class="name ellipsis" >G.S. La Spezia Calcio</span>
+                        <!-- /ko -->
+                      </div>
+                      <!-- ko if: $data.followed_users_objects && followed_users_objects.length --><!-- /ko -->
+
+                      <!-- ko if: $data.requires_membership --><!-- /ko -->
+                      <!-- ko if: $data.is_prepaid --><!-- /ko -->
+
+                      <!-- ko if: $data.is_free --><!-- /ko -->
+                      <!-- ko ifnot: $data.is_free -->
+                      <div class="price">
+                        <!-- ko if: is_online_payment && $data.price != 0 --><!-- /ko -->
+                        <span >€ 6.00</span>
+                      </div>
+                      <!-- /ko -->
+
+
+                      <div class="empty-spots">
+                        <!-- ko if: $data.retracted --><!-- /ko -->
+                        <!-- ko ifnot: $data.retracted -->
+                        <span class="lock-status" >
+                          <!-- ko if: $data.locked -->
+                          <i class="ico-locked medium black"></i>
+                          <!-- /ko -->
+                          <!-- ko ifnot: $data.locked --><!-- /ko -->
+                        </span>
+
+                        <!-- ko ifnot: $data.is_started -->
+                        <!-- ko ifnot: missing_players <= 0 && missing_benches <= 0 --><!-- /ko -->
+                        <!-- /ko -->
+
+                        <!-- /ko -->
+                      </div>
+
+                      <!-- ko if: $data.me --><!-- /ko -->
+                    </div>
+                    <br style="clear:both">
+                  </div>
+                </div>
+                <!-- /ko -->
+
+                <!-- ko if: $index() == 0 || moment($root.matches()[$index() - 1].locale_start_datetime).format('DDMMYYYY') !== moment(locale_start_datetime).format('DDMMYYYY') --><!-- /ko -->
+                <!-- ko if: is_played && is_ended --><!-- /ko -->
+                <!-- ko ifnot: is_played && is_ended -->
+
+
+                <div class="match-scheduled" >
+                  <div class="box">
+                    <div class="leftPanel">
+                      <div class="time">
+                        <span class="hour" >20</span>
+                        <span class="ampm" >pm</span>
+                        <span class="minutes" >.00</span>
+                      </div>
+                      <img src="https://s3-eu-west-1.amazonaws.com/static.fubles.com/images/User/322942/avatar/original_medium.jpg" >
+                    </div>
+                    <div class="rightPanel">
+                      <div class="title">
+                        <span >Calcio a 5</span>
+                        <!-- ko if: field.covering !=0 --><!-- /ko -->
+                      </div>
+                      <div class="structure">
+                        <!-- ko if: $data.distance -->
+                        <b >5.1 Km</b> -
+                        <!-- /ko -->
+                        <!-- ko if: $data.field -->
+                        <span class="name ellipsis" data-bind="text: field.structure.name">Tennis Calcetto Barona  (T.C.B.)</span>
+                        <!-- /ko -->
+                      </div>
+                      <!-- ko if: $data.followed_users_objects && followed_users_objects.length -->
+                      <div class="following" data-bind="foreach: followed_users_objects">
+                        <img src="https://s3-eu-west-1.amazonaws.com/static.fubles.com/images/User/322942/avatar/original_medium.jpg" data-bind="attr: {src: avatar_medium}">
+
+                        <img src="https://s3-eu-west-1.amazonaws.com/static.fubles.com/images/User/426616/avatar/02a7c6f65413d0ec785abdbd25a877cd_medium.jpeg" data-bind="attr: {src: avatar_medium}">
+
+                        <img src="https://s3-eu-west-1.amazonaws.com/static.fubles.com/images/User/317316/avatar/087fc5fdb4c954ea71adfb7e5ed0bc42_medium.jpeg" data-bind="attr: {src: avatar_medium}">
+
+                        <img src="https://s3-eu-west-1.amazonaws.com/static.fubles.com/images/User/225580/avatar/d272c9206f57d0f0ff3690b988759fd8_medium.jpeg" data-bind="attr: {src: avatar_medium}">
+                      </div>
+                      <!-- /ko -->
+
+                      <!-- ko if: $data.requires_membership --><!-- /ko -->
+                      <!-- ko if: $data.is_prepaid --><!-- /ko -->
+
+                      <!-- ko if: $data.is_free --><!-- /ko -->
+                      <!-- ko ifnot: $data.is_free -->
+                      <div class="price">
+                        <!-- ko if: is_online_payment && $data.price != 0 --><!-- /ko -->
+                        <span data-bind="text: $data.cost_per_player_as_string">€ 6.50</span>
+                      </div>
+                      <!-- /ko -->
+
+
+                      <div class="empty-spots">
+                        <!-- ko if: $data.retracted --><!-- /ko -->
+                        <!-- ko ifnot: $data.retracted -->
+                        <span class="lock-status" data-bind="if: fubles.constants.Match.TYPE_PRIVATE == type"></span>
+
+                        <!-- ko ifnot: $data.is_started -->
+                        <!-- ko ifnot: missing_players <= 0 && missing_benches <= 0 --><!-- /ko -->
+                        <!-- /ko -->
+
+                        <!-- /ko -->
+                      </div>
+
+                      <!-- ko if: $data.me -->
+                      <img class="me" src="http://static.fubles.com.s3-eu-west-1.amazonaws.com/images/mobile/me_right.png?v618">
+                      <!-- /ko -->
+                    </div>
+                    <br style="clear:both">
+                  </div>
+                </div>
+                <!-- /ko -->
+
+                <!-- ko if: $index() == 0 || moment($root.matches()[$index() - 1].locale_start_datetime).format('DDMMYYYY') !== moment(locale_start_datetime).format('DDMMYYYY') --><!-- /ko -->
+                <!-- ko if: is_played && is_ended --><!-- /ko -->
+                <!-- ko ifnot: is_played && is_ended -->
+
+
+                <div class="match-scheduled" data-bind="click: $root.redirect">
+                  <div class="box">
+                    <div class="leftPanel">
+                      <div class="time">
+                        <span class="hour" data-bind="text: moment(start_datetime).format('HH')">20</span>
+                        <span class="ampm" data-bind="text: moment(start_datetime).format('a')">pm</span>
+                        <span class="minutes" data-bind="text: '.' + moment(start_datetime).format('mm')">.00</span>
+                      </div>
+                      <img src="https://s3-eu-west-1.amazonaws.com/static.fubles.com/images/User/518133/avatar/77a7706b1523f1acd4bbb06a92e60158_medium.jpeg" data-bind="attr: {src: owner.avatar_medium}">
+                    </div>
+                    <div class="rightPanel">
+                      <div class="title">
+                        <span data-bind="text: $data.sport_type_name">Calcio a 7</span>
+                        <!-- ko if: field.covering !=0 --><!-- /ko -->
+                      </div>
+                      <div class="structure">
+                        <!-- ko if: $data.distance -->
+                        <b data-bind="text: distance + ' Km'">5.7 Km</b> -
+                        <!-- /ko -->
+                        <!-- ko if: $data.field -->
+                        <span class="name ellipsis" data-bind="text: field.structure.name">AS Barona</span>
+                        <!-- /ko -->
+                      </div>
+                      <!-- ko if: $data.followed_users_objects && followed_users_objects.length --><!-- /ko -->
+
+                      <!-- ko if: $data.requires_membership --><!-- /ko -->
+                      <!-- ko if: $data.is_prepaid --><!-- /ko -->
+
+                      <!-- ko if: $data.is_free --><!-- /ko -->
+                      <!-- ko ifnot: $data.is_free -->
+                      <div class="price">
+                        <!-- ko if: is_online_payment && $data.price != 0 --><!-- /ko -->
+                        <span data-bind="text: $data.cost_per_player_as_string">€ 7.50</span>
+                      </div>
+                      <!-- /ko -->
+
+
+                      <div class="empty-spots">
+                        <!-- ko if: $data.retracted --><!-- /ko -->
+                        <!-- ko ifnot: $data.retracted -->
+                        <span class="lock-status" data-bind="if: fubles.constants.Match.TYPE_PRIVATE == type"></span>
+
+                        <!-- ko ifnot: $data.is_started -->
+                        <!-- ko ifnot: missing_players <= 0 && missing_benches <= 0 --><!-- /ko -->
+                        <!-- /ko -->
+
+                        <!-- /ko -->
+                      </div>
+
+                      <!-- ko if: $data.me --><!-- /ko -->
+                    </div>
+                    <br style="clear:both">
+                  </div>
+                </div>
+                <!-- /ko -->
+
+                <!-- ko if: $index() == 0 || moment($root.matches()[$index() - 1].locale_start_datetime).format('DDMMYYYY') !== moment(locale_start_datetime).format('DDMMYYYY') --><!-- /ko -->
+                <!-- ko if: is_played && is_ended --><!-- /ko -->
+                <!-- ko ifnot: is_played && is_ended -->
+
+
+                <div class="match-scheduled" data-bind="click: $root.redirect">
+                  <div class="box">
+                    <div class="leftPanel">
+                      <div class="time">
+                        <span class="hour" data-bind="text: moment(start_datetime).format('HH')">20</span>
+                        <span class="ampm" data-bind="text: moment(start_datetime).format('a')">pm</span>
+                        <span class="minutes" data-bind="text: '.' + moment(start_datetime).format('mm')">.30</span>
+                      </div>
+                      <img src="https://s3-eu-west-1.amazonaws.com/static.fubles.com/images/User/26742/avatar/ef46812e560971b8524f4edd52a2c7cd_medium.jpeg" data-bind="attr: {src: owner.avatar_medium}">
+                    </div>
+                    <div class="rightPanel">
+                      <div class="title">
+                        <span data-bind="text: $data.sport_type_name">Calcio a 7</span>
+                        <!-- ko if: field.covering !=0 --><!-- /ko -->
+                      </div>
+                      <div class="structure">
+                        <!-- ko if: $data.distance -->
+                        <b data-bind="text: distance + ' Km'">5.4 Km</b> -
+                        <!-- /ko -->
+                        <!-- ko if: $data.field -->
+                        <span class="name ellipsis" data-bind="text: field.structure.name">Parrocchia San Protaso</span>
+                        <!-- /ko -->
+                      </div>
+                      <!-- ko if: $data.followed_users_objects && followed_users_objects.length --><!-- /ko -->
+
+                      <!-- ko if: $data.requires_membership --><!-- /ko -->
+                      <!-- ko if: $data.is_prepaid --><!-- /ko -->
+
+                      <!-- ko if: $data.is_free --><!-- /ko -->
+                      <!-- ko ifnot: $data.is_free -->
+                      <div class="price">
+                        <!-- ko if: is_online_payment && $data.price != 0 --><!-- /ko -->
+                        <span data-bind="text: $data.cost_per_player_as_string">€ 7.50</span>
+                      </div>
+                      <!-- /ko -->
+
+
+                      <div class="empty-spots">
+                        <!-- ko if: $data.retracted --><!-- /ko -->
+                        <!-- ko ifnot: $data.retracted -->
+                        <span class="lock-status" data-bind="if: fubles.constants.Match.TYPE_PRIVATE == type"></span>
+
+                        <!-- ko ifnot: $data.is_started -->
+                        <!-- ko ifnot: missing_players <= 0 && missing_benches <= 0 -->
+                        <div class="roww spots take-seat" data-bind="text: missing_players + (missing_benches ? ' + ' + missing_benches : ''), css: {green: missing_players == 0}">1</div>
+                        <!-- /ko -->
+                        <!-- /ko -->
+
+                        <!-- /ko -->
+                      </div>
+
+                      <!-- ko if: $data.me --><!-- /ko -->
+                    </div>
+                    <br style="clear:both">
+                  </div>
+                </div>
+                <!-- /ko -->
+
+                <!-- ko if: $index() == 0 || moment($root.matches()[$index() - 1].locale_start_datetime).format('DDMMYYYY') !== moment(locale_start_datetime).format('DDMMYYYY') --><!-- /ko -->
+                <!-- ko if: is_played && is_ended --><!-- /ko -->
+                <!-- ko ifnot: is_played && is_ended -->
+
+
+                <div class="match-scheduled" data-bind="click: $root.redirect">
+                  <div class="box">
+                    <div class="leftPanel">
+                      <div class="time">
+                        <span class="hour" data-bind="text: moment(start_datetime).format('HH')">20</span>
+                        <span class="ampm" data-bind="text: moment(start_datetime).format('a')">pm</span>
+                        <span class="minutes" data-bind="text: '.' + moment(start_datetime).format('mm')">.30</span>
+                      </div>
+                      <img src="https://s3-eu-west-1.amazonaws.com/static.fubles.com/images/User/159567/avatar/original_medium.jpg" data-bind="attr: {src: owner.avatar_medium}">
+                    </div>
+                    <div class="rightPanel">
+                      <div class="title">
+                        <span data-bind="text: $data.sport_type_name">Calcio a 5</span>
+                        <!-- ko if: field.covering !=0 --><!-- /ko -->
+                      </div>
+                      <div class="structure">
+                        <!-- ko if: $data.distance -->
+                        <b data-bind="text: distance + ' Km'">3 Km</b> -
+                        <!-- /ko -->
+                        <!-- ko if: $data.field -->
+                        <span class="name ellipsis" data-bind="text: field.structure.name">DLF - FootballCity</span>
+                        <!-- /ko -->
+                      </div>
+                      <!-- ko if: $data.followed_users_objects && followed_users_objects.length --><!-- /ko -->
+
+                      <!-- ko if: $data.requires_membership --><!-- /ko -->
+                      <!-- ko if: $data.is_prepaid --><!-- /ko -->
+
+                      <!-- ko if: $data.is_free --><!-- /ko -->
+                      <!-- ko ifnot: $data.is_free -->
+                      <div class="price">
+                        <!-- ko if: is_online_payment && $data.price != 0 --><!-- /ko -->
+                        <span data-bind="text: $data.cost_per_player_as_string">€ 7.00</span>
+                      </div>
+                      <!-- /ko -->
+
+
+                      <div class="empty-spots">
+                        <!-- ko if: $data.retracted --><!-- /ko -->
+                        <!-- ko ifnot: $data.retracted -->
+                        <span class="lock-status" data-bind="if: fubles.constants.Match.TYPE_PRIVATE == type"></span>
+
+                        <!-- ko ifnot: $data.is_started -->
+                        <!-- ko ifnot: missing_players <= 0 && missing_benches <= 0 --><!-- /ko -->
+                        <!-- /ko -->
+
+                        <!-- /ko -->
+                      </div>
+
+                      <!-- ko if: $data.me --><!-- /ko -->
+                    </div>
+                    <br style="clear:both">
+                  </div>
+                </div>
+                <!-- /ko -->
+
+                <!-- ko if: $index() == 0 || moment($root.matches()[$index() - 1].locale_start_datetime).format('DDMMYYYY') !== moment(locale_start_datetime).format('DDMMYYYY') --><!-- /ko -->
+                <!-- ko if: is_played && is_ended --><!-- /ko -->
+                <!-- ko ifnot: is_played && is_ended -->
+
+
+                <div class="match-scheduled" data-bind="click: $root.redirect">
+                  <div class="box">
+                    <div class="leftPanel">
+                      <div class="time">
+                        <span class="hour" data-bind="text: moment(start_datetime).format('HH')">20</span>
+                        <span class="ampm" data-bind="text: moment(start_datetime).format('a')">pm</span>
+                        <span class="minutes" data-bind="text: '.' + moment(start_datetime).format('mm')">.30</span>
+                      </div>
+                      <img src="https://s3-eu-west-1.amazonaws.com/static.fubles.com/images/User/15279/avatar/original_medium.jpg" data-bind="attr: {src: owner.avatar_medium}">
+                    </div>
+                    <div class="rightPanel">
+                      <div class="title">
+                        <span data-bind="text: $data.sport_type_name">Calcio a 7</span>
+                        <!-- ko if: field.covering !=0 --><!-- /ko -->
+                      </div>
+                      <div class="structure">
+                        <!-- ko if: $data.distance -->
+                        <b data-bind="text: distance + ' Km'">7.3 Km</b> -
+                        <!-- /ko -->
+                        <!-- ko if: $data.field -->
+                        <span class="name ellipsis" data-bind="text: field.structure.name">Centro Sportivo Savorelli (C.S. Cappelli)</span>
+                        <!-- /ko -->
+                      </div>
+                      <!-- ko if: $data.followed_users_objects && followed_users_objects.length --><!-- /ko -->
+
+                      <!-- ko if: $data.requires_membership --><!-- /ko -->
+                      <!-- ko if: $data.is_prepaid --><!-- /ko -->
+
+                      <!-- ko if: $data.is_free --><!-- /ko -->
+                      <!-- ko ifnot: $data.is_free -->
+                      <div class="price">
+                        <!-- ko if: is_online_payment && $data.price != 0 --><!-- /ko -->
+                        <span data-bind="text: $data.cost_per_player_as_string">€ 6.50</span>
+                      </div>
+                      <!-- /ko -->
+
+
+                      <div class="empty-spots">
+                        <!-- ko if: $data.retracted --><!-- /ko -->
+                        <!-- ko ifnot: $data.retracted -->
+                        <span class="lock-status" data-bind="if: fubles.constants.Match.TYPE_PRIVATE == type"></span>
+
+                        <!-- ko ifnot: $data.is_started -->
+                        <!-- ko ifnot: missing_players <= 0 && missing_benches <= 0 --><!-- /ko -->
+                        <!-- /ko -->
+
+                        <!-- /ko -->
+                      </div>
+
+                      <!-- ko if: $data.me --><!-- /ko -->
+                    </div>
+                    <br style="clear:both">
+                  </div>
+                </div>
+                <!-- /ko -->
+
+                <!-- ko if: $index() == 0 || moment($root.matches()[$index() - 1].locale_start_datetime).format('DDMMYYYY') !== moment(locale_start_datetime).format('DDMMYYYY') --><!-- /ko -->
+                <!-- ko if: is_played && is_ended --><!-- /ko -->
+                <!-- ko ifnot: is_played && is_ended -->
+
+
+                <div class="match-scheduled" data-bind="click: $root.redirect">
+                  <div class="box">
+                    <div class="leftPanel">
+                      <div class="time">
+                        <span class="hour" data-bind="text: moment(start_datetime).format('HH')">21</span>
+                        <span class="ampm" data-bind="text: moment(start_datetime).format('a')">pm</span>
+                        <span class="minutes" data-bind="text: '.' + moment(start_datetime).format('mm')">.00</span>
+                      </div>
+                      <img src="https://s3-eu-west-1.amazonaws.com/static.fubles.com/images/User/35860/avatar/original_medium.jpg" data-bind="attr: {src: owner.avatar_medium}">
+                    </div>
+                    <div class="rightPanel">
+                      <div class="title">
+                        <span data-bind="text: $data.sport_type_name">Calcio a 5</span>
+                        <!-- ko if: field.covering !=0 -->
+                        <span data-bind="text: field.covering_string">Indoor</span>
+                        <!-- /ko -->
+                      </div>
+                      <div class="structure">
+                        <!-- ko if: $data.distance -->
+                        <b data-bind="text: distance + ' Km'">6.5 Km</b> -
+                        <!-- /ko -->
+                        <!-- ko if: $data.field -->
+                        <span class="name ellipsis" data-bind="text: field.structure.name">A.S. Masseroni Marchese Srl </span>
+                        <!-- /ko -->
+                      </div>
+                      <!-- ko if: $data.followed_users_objects && followed_users_objects.length --><!-- /ko -->
+
+                      <!-- ko if: $data.requires_membership --><!-- /ko -->
+                      <!-- ko if: $data.is_prepaid --><!-- /ko -->
+
+                      <!-- ko if: $data.is_free --><!-- /ko -->
+                      <!-- ko ifnot: $data.is_free -->
+                      <div class="price">
+                        <!-- ko if: is_online_payment && $data.price != 0 --><!-- /ko -->
+                        <span data-bind="text: $data.cost_per_player_as_string">€ 6.50</span>
+                      </div>
+                      <!-- /ko -->
+
+
+                      <div class="empty-spots">
+                        <!-- ko if: $data.retracted --><!-- /ko -->
+                        <!-- ko ifnot: $data.retracted -->
+                        <span class="lock-status" data-bind="if: fubles.constants.Match.TYPE_PRIVATE == type"></span>
+
+                        <!-- ko ifnot: $data.is_started -->
+                        <!-- ko ifnot: missing_players <= 0 && missing_benches <= 0 -->
+                        <div class="roww spots take-seat" data-bind="text: missing_players + (missing_benches ? ' + ' + missing_benches : ''), css: {green: missing_players == 0}">4</div>
+                        <!-- /ko -->
+                        <!-- /ko -->
+
+                        <!-- /ko -->
+                      </div>
+
+                      <!-- ko if: $data.me --><!-- /ko -->
+                    </div>
+                    <br style="clear:both">
+                  </div>
+                </div>
+                <!-- /ko -->
+
+                <!-- ko if: $index() == 0 || moment($root.matches()[$index() - 1].locale_start_datetime).format('DDMMYYYY') !== moment(locale_start_datetime).format('DDMMYYYY') --><!-- /ko -->
+                <!-- ko if: is_played && is_ended --><!-- /ko -->
+                <!-- ko ifnot: is_played && is_ended -->
+
+
+                <div class="match-scheduled" data-bind="click: $root.redirect">
+                  <div class="box">
+                    <div class="leftPanel">
+                      <div class="time">
+                        <span class="hour" data-bind="text: moment(start_datetime).format('HH')">21</span>
+                        <span class="ampm" data-bind="text: moment(start_datetime).format('a')">pm</span>
+                        <span class="minutes" data-bind="text: '.' + moment(start_datetime).format('mm')">.00</span>
+                      </div>
+                      <img src="https://s3-eu-west-1.amazonaws.com/static.fubles.com/images/User/360017/avatar/879dae8f074797a46f9f2197ab53d2a8_medium.jpeg" data-bind="attr: {src: owner.avatar_medium}">
+                    </div>
+                    <div class="rightPanel">
+                      <div class="title">
+                        <span data-bind="text: $data.sport_type_name">Calcio a 5</span>
+                        <!-- ko if: field.covering !=0 --><!-- /ko -->
+                      </div>
+                      <div class="structure">
+                        <!-- ko if: $data.distance -->
+                        <b data-bind="text: distance + ' Km'">9.5 Km</b> -
+                        <!-- /ko -->
+                        <!-- ko if: $data.field -->
+                        <span class="name ellipsis" data-bind="text: field.structure.name">L'amico Charly Onlus</span>
+                        <!-- /ko -->
+                      </div>
+                      <!-- ko if: $data.followed_users_objects && followed_users_objects.length --><!-- /ko -->
+
+                      <!-- ko if: $data.requires_membership --><!-- /ko -->
+                      <!-- ko if: $data.is_prepaid --><!-- /ko -->
+
+                      <!-- ko if: $data.is_free --><!-- /ko -->
+                      <!-- ko ifnot: $data.is_free -->
+                      <div class="price">
+                        <!-- ko if: is_online_payment && $data.price != 0 --><!-- /ko -->
+                        <span data-bind="text: $data.cost_per_player_as_string">€ 5.00</span>
+                      </div>
+                      <!-- /ko -->
+
+
+                      <div class="empty-spots">
+                        <!-- ko if: $data.retracted --><!-- /ko -->
+                        <!-- ko ifnot: $data.retracted -->
+                        <span class="lock-status" data-bind="if: fubles.constants.Match.TYPE_PRIVATE == type"></span>
+
+                        <!-- ko ifnot: $data.is_started -->
+                        <!-- ko ifnot: missing_players <= 0 && missing_benches <= 0 -->
+                        <div class="roww spots take-seat" data-bind="text: missing_players + (missing_benches ? ' + ' + missing_benches : ''), css: {green: missing_players == 0}">6</div>
+                        <!-- /ko -->
+                        <!-- /ko -->
+
+                        <!-- /ko -->
+                      </div>
+
+                      <!-- ko if: $data.me --><!-- /ko -->
+                    </div>
+                    <br style="clear:both">
+                  </div>
+                </div>
+                <!-- /ko -->
+
+                <!-- ko if: $index() == 0 || moment($root.matches()[$index() - 1].locale_start_datetime).format('DDMMYYYY') !== moment(locale_start_datetime).format('DDMMYYYY') --><!-- /ko -->
+                <!-- ko if: is_played && is_ended --><!-- /ko -->
+                <!-- ko ifnot: is_played && is_ended -->
+
+
+                <div class="match-scheduled" data-bind="click: $root.redirect">
+                  <div class="box">
+                    <div class="leftPanel">
+                      <div class="time">
+                        <span class="hour" data-bind="text: moment(start_datetime).format('HH')">21</span>
+                        <span class="ampm" data-bind="text: moment(start_datetime).format('a')">pm</span>
+                        <span class="minutes" data-bind="text: '.' + moment(start_datetime).format('mm')">.30</span>
+                      </div>
+                      <img src="https://s3-eu-west-1.amazonaws.com/static.fubles.com/images/User/26742/avatar/ef46812e560971b8524f4edd52a2c7cd_medium.jpeg" data-bind="attr: {src: owner.avatar_medium}">
+                    </div>
+                    <div class="rightPanel">
+                      <div class="title">
+                        <span data-bind="text: $data.sport_type_name">Calcio a 7</span>
+                        <!-- ko if: field.covering !=0 --><!-- /ko -->
+                      </div>
+                      <div class="structure">
+                        <!-- ko if: $data.distance -->
+                        <b data-bind="text: distance + ' Km'">5.4 Km</b> -
+                        <!-- /ko -->
+                        <!-- ko if: $data.field -->
+                        <span class="name ellipsis" data-bind="text: field.structure.name">Parrocchia San Protaso</span>
+                        <!-- /ko -->
+                      </div>
+                      <!-- ko if: $data.followed_users_objects && followed_users_objects.length --><!-- /ko -->
+
+                      <!-- ko if: $data.requires_membership --><!-- /ko -->
+                      <!-- ko if: $data.is_prepaid --><!-- /ko -->
+
+                      <!-- ko if: $data.is_free --><!-- /ko -->
+                      <!-- ko ifnot: $data.is_free -->
+                      <div class="price">
+                        <!-- ko if: is_online_payment && $data.price != 0 --><!-- /ko -->
+                        <span data-bind="text: $data.cost_per_player_as_string">€ 7.50</span>
+                      </div>
+                      <!-- /ko -->
+
+
+                      <div class="empty-spots">
+                        <!-- ko if: $data.retracted --><!-- /ko -->
+                        <!-- ko ifnot: $data.retracted -->
+                        <span class="lock-status" data-bind="if: fubles.constants.Match.TYPE_PRIVATE == type"></span>
+
+                        <!-- ko ifnot: $data.is_started -->
+                        <!-- ko ifnot: missing_players <= 0 && missing_benches <= 0 -->
+                        <div class="roww spots take-seat" data-bind="text: missing_players + (missing_benches ? ' + ' + missing_benches : ''), css: {green: missing_players == 0}">1</div>
+                        <!-- /ko -->
+                        <!-- /ko -->
+
+                        <!-- /ko -->
+                      </div>
+
+                      <!-- ko if: $data.me --><!-- /ko -->
+                    </div>
+                    <br style="clear:both">
+                  </div>
+                </div>
+                <!-- /ko -->
+
+                <!-- ko if: $index() == 0 || moment($root.matches()[$index() - 1].locale_start_datetime).format('DDMMYYYY') !== moment(locale_start_datetime).format('DDMMYYYY') --><!-- /ko -->
+                <!-- ko if: is_played && is_ended --><!-- /ko -->
+                <!-- ko ifnot: is_played && is_ended -->
+
+
+                <div class="match-scheduled" data-bind="click: $root.redirect">
+                  <div class="box">
+                    <div class="leftPanel">
+                      <div class="time">
+                        <span class="hour" data-bind="text: moment(start_datetime).format('HH')">22</span>
+                        <span class="ampm" data-bind="text: moment(start_datetime).format('a')">pm</span>
+                        <span class="minutes" data-bind="text: '.' + moment(start_datetime).format('mm')">.00</span>
+                      </div>
+                      <img src="https://s3-eu-west-1.amazonaws.com/static.fubles.com/images/User/360017/avatar/879dae8f074797a46f9f2197ab53d2a8_medium.jpeg" data-bind="attr: {src: owner.avatar_medium}">
+                    </div>
+                    <div class="rightPanel">
+                      <div class="title">
+                        <span data-bind="text: $data.sport_type_name">Calcio a 5</span>
+                        <!-- ko if: field.covering !=0 --><!-- /ko -->
+                      </div>
+                      <div class="structure">
+                        <!-- ko if: $data.distance -->
+                        <b data-bind="text: distance + ' Km'">9.5 Km</b> -
+                        <!-- /ko -->
+                        <!-- ko if: $data.field -->
+                        <span class="name ellipsis" data-bind="text: field.structure.name">L'amico Charly Onlus</span>
+                        <!-- /ko -->
+                      </div>
+                      <!-- ko if: $data.followed_users_objects && followed_users_objects.length --><!-- /ko -->
+
+                      <!-- ko if: $data.requires_membership --><!-- /ko -->
+                      <!-- ko if: $data.is_prepaid --><!-- /ko -->
+
+                      <!-- ko if: $data.is_free --><!-- /ko -->
+                      <!-- ko ifnot: $data.is_free -->
+                      <div class="price">
+                        <!-- ko if: is_online_payment && $data.price != 0 --><!-- /ko -->
+                        <span data-bind="text: $data.cost_per_player_as_string">€ 5.00</span>
+                      </div>
+                      <!-- /ko -->
+
+
+                      <div class="empty-spots">
+                        <!-- ko if: $data.retracted --><!-- /ko -->
+                        <!-- ko ifnot: $data.retracted -->
+                        <span class="lock-status" data-bind="if: fubles.constants.Match.TYPE_PRIVATE == type"></span>
+
+                        <!-- ko ifnot: $data.is_started -->
+                        <!-- ko ifnot: missing_players <= 0 && missing_benches <= 0 -->
+                        <div class="roww spots take-seat" data-bind="text: missing_players + (missing_benches ? ' + ' + missing_benches : ''), css: {green: missing_players == 0}">10</div>
+                        <!-- /ko -->
+                        <!-- /ko -->
+
+                        <!-- /ko -->
+                      </div>
+
+                      <!-- ko if: $data.me --><!-- /ko -->
+                    </div>
+                    <br style="clear:both">
+                  </div>
+                </div>
+                <!-- /ko -->
+              </div>
+              <!-- /ko -->
+              <div class="loader" style="display: none;">
+                <img src="http://static.fubles.com.s3-eu-west-1.amazonaws.com/images/mobile/gear.png?v618" class="icon-spin large">
+              </div>
+              <!-- ko if: matches().length == 0 && !loading() --><!-- /ko -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> 
+  </body>
+</html>
