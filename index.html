@@ -4,6 +4,7 @@
     <meta name="viewport" content="width=device-width">
     <title>Elenco delle partite | Fubles</title>
     <link href="mobile.css" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
   </head>
   <body style="margin:0">
     <div id="skeleton">
@@ -11,7 +12,55 @@
         <div id="content">
           <div id="matches" style="margin:0">
             <div class="tablet-wrapper">
-              <div >
+              <div ng-app>
+                <!-- ****** START NG-APP ****** -->
+
+                <h3>This is {{'My ' + 'Fubles!'}}</h3>
+
+                <!-- ****** INIZIO ****** -->
+                <div class="navigation-bar">
+                  <span >Oggi</span>
+                  <span class="bullet-separator"></span>
+                  <span >Marted&igrave;</span>
+                </div>
+
+                <div class="match-scheduled" >
+                  <div class="box">
+                    <div class="leftPanel">
+                      <div class="time">
+                        <span class="hour" >18</span>
+                        <span class="ampm" >pm</span>
+                        <span class="minutes" >.00</span>
+                      </div>
+                      <img src="https://s3-eu-west-1.amazonaws.com/static.fubles.com/images/User/360017/avatar/879dae8f074797a46f9f2197ab53d2a8_medium.jpeg" >
+                    </div>
+                    <div class="rightPanel">
+                      <div class="title">
+                        <span >Calcio a 5</span>
+                      </div>
+                      <div class="structure">
+                        <b >9.5 Km</b> -
+                        <span class="name ellipsis" >L'amico Charly Onlus</span>
+                      </div>
+
+                      <div class="price">
+                        <span >&euro; 5.00</span>
+                      </div>
+
+
+                      <div class="empty-spots">
+                        <span class="lock-status" ></span>
+
+                        <div class="roww spots take-seat" >8</div>
+
+                      </div>
+
+                    </div>
+                    <br style="clear:both">
+                  </div>
+                </div>
+                <!-- ****** FINE ****** -->
+
                 <div class="navigation-bar">
                   <span >Oggi</span>
                   <span class="bullet-separator"></span>
@@ -493,12 +542,12 @@
 
 
 
-                <div class="match-scheduled" data-bind="click: $root.redirect">
+                <div class="match-scheduled" >
                   <div class="box">
                     <div class="leftPanel">
                       <div class="time">
-                        <span class="hour" data-bind="text: moment(start_datetime).format('HH')">20</span>
-                        <span class="ampm" data-bind="text: moment(start_datetime).format('a')">pm</span>
+                        <span class="hour" >20</span>
+                        <span class="ampm" >pm</span>
                         <span class="minutes" data-bind="text: '.' + moment(start_datetime).format('mm')">.00</span>
                       </div>
                       <img src="https://s3-eu-west-1.amazonaws.com/static.fubles.com/images/User/518133/avatar/77a7706b1523f1acd4bbb06a92e60158_medium.jpeg" data-bind="attr: {src: owner.avatar_medium}">
@@ -531,7 +580,7 @@
 
 
 
-                <div class="match-scheduled" data-bind="click: $root.redirect">
+                <div class="match-scheduled" >
                   <div class="box">
                     <div class="leftPanel">
                       <div class="time">
@@ -570,7 +619,7 @@
 
 
 
-                <div class="match-scheduled" data-bind="click: $root.redirect">
+                <div class="match-scheduled" >
                   <div class="box">
                     <div class="leftPanel">
                       <div class="time">
@@ -608,7 +657,7 @@
 
 
 
-                <div class="match-scheduled" data-bind="click: $root.redirect">
+                <div class="match-scheduled" >
                   <div class="box">
                     <div class="leftPanel">
                       <div class="time">
@@ -646,7 +695,7 @@
 
 
 
-                <div class="match-scheduled" data-bind="click: $root.redirect">
+                <div class="match-scheduled" >
                   <div class="box">
                     <div class="leftPanel">
                       <div class="time">
@@ -686,7 +735,7 @@
 
 
 
-                <div class="match-scheduled" data-bind="click: $root.redirect">
+                <div class="match-scheduled" >
                   <div class="box">
                     <div class="leftPanel">
                       <div class="time">
@@ -725,7 +774,7 @@
 
 
 
-                <div class="match-scheduled" data-bind="click: $root.redirect">
+                <div class="match-scheduled" >
                   <div class="box">
                     <div class="leftPanel">
                       <div class="time">
@@ -764,7 +813,7 @@
 
 
 
-                <div class="match-scheduled" data-bind="click: $root.redirect">
+                <div class="match-scheduled" >
                   <div class="box">
                     <div class="leftPanel">
                       <div class="time">
@@ -798,9 +847,8 @@
                     <br style="clear:both">
                   </div>
                 </div>
-              </div>
-              <div class="loader" style="display: none;">
-                <img src="http://static.fubles.com.s3-eu-west-1.amazonaws.com/images/mobile/gear.png?v618" class="icon-spin large">
+
+               <!-- ****** END NG-APP ****** -->
               </div>
             </div>
           </div>
