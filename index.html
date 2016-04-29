@@ -13,12 +13,12 @@
         <div id="content" ng-app="myFubles">
           <div id="matches" style="margin:0" ng-controller="MatchesController">
             <div class="tablet-wrapper">
-              <h3>{{title}} - {{matches.length}} matches found</h3>
+              <h3 style="margin-left:10px">{{title}} - {{matches.length}} matches found</h3>
 
               <div class="match-scheduled" ng-repeat="match in matches">
 
                 <!-- ****** START MATCH ****** -->
-                <div ng-hide="matches[$index-1].date == match.date" class="navigation-bar">
+                <div ng-if="matches[$index-1].date != match.date" class="navigation-bar">
                   <span>{{match.weekday}}</span>
                   <span class="bullet-separator"></span>
                   <span>{{match.date}}</span>
