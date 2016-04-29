@@ -5,53 +5,53 @@
     <title>Elenco delle partite | Fubles</title>
     <link href="mobile.css" rel="stylesheet" type="text/css">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+    <script src="myfubles.js"></script>
   </head>
   <body style="margin:0">
     <div id="skeleton">
       <div id="body">
-        <div id="content">
-          <div id="matches" style="margin:0">
+        <div id="content" ng-app="myFubles">
+          <div id="matches" style="margin:0" ng-controller="MatchesController">
             <div class="tablet-wrapper">
-              <div ng-app>
-                <!-- ****** START NG-APP ****** -->
+              <div>
 
-                <h3>This is {{'My ' + 'Fubles!'}}</h3>
+                <h3>{{title}} - {{matches.length}} matches found</h3>
 
                 <div class="navigation-bar">
-                  <span >Oggi</span>
+                  <span >Non si sa quando</span>
                   <span class="bullet-separator"></span>
-                  <span >Marted&igrave;</span>
+                  <span >Un giorno della settimana</span>
                 </div>
                 
                 <!-- ****** START MATCH ****** -->
-                <div class="match-scheduled" >
+                <div class="match-scheduled" ng-repeat="match in matches">
                   <div class="box">
                     <div class="leftPanel">
                       <div class="time">
-                        <span class="hour" >18</span>
+                        <span class="hour" >{{match.hour}}</span>
                         <span class="ampm" >pm</span>
-                        <span class="minutes" >.00</span>
+                        <span class="minutes" >.{{match.minute}}</span>
                       </div>
-                      <img src="https://s3-eu-west-1.amazonaws.com/static.fubles.com/images/User/360017/avatar/879dae8f074797a46f9f2197ab53d2a8_medium.jpeg" >
+                      <img src="{{match.image}}" >
                     </div>
                     <div class="rightPanel">
                       <div class="title">
                         <span >Calcio a 5</span>
                       </div>
                       <div class="structure">
-                        <b >9.5 Km</b> -
-                        <span class="name ellipsis" >L'amico Charly Onlus</span>
+                        <b >{{match.km}} Km</b> -
+                        <span class="name ellipsis">{{match.structure}}</span>
                       </div>
 
                       <div class="price">
-                        <span >&euro; 5.00</span>
+                        <span >&euro; {{match.price}}</span>
                       </div>
 
 
                       <div class="empty-spots">
                         <span class="lock-status" ></span>
 
-                        <div class="roww spots take-seat" >8</div>
+                        <div class="roww spots take-seat" >{{match.free}}</div>
 
                       </div>
 
