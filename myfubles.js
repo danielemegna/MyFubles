@@ -4,12 +4,14 @@ myFubles.controller("MatchesController", function($scope, $http) {
   $scope.title = "This is My Fubles!"
 
   $http.get('matches.json').success(function(data) {
-    $scope.matches = data.near.map(matchesMap)
+    $scope.matches = data.near
+      .filter(matchesFilter)
+      .map(matchesMap)
     console.debug($scope.matches)
   })
 })
 
-function matchesMap(match, index) {
+function matchesMap(match) {
   return {
     hour:       match.locale_start_time.split(':')[0],
     minute:     match.locale_start_time.split(':')[1],
@@ -18,5 +20,11 @@ function matchesMap(match, index) {
     structure:  match.field.structure.name,
     price:      (match.price / 10).toFixed(2),
     free:       match.missing_players,
+    date:       match.locale_start_day + " " + match.locale_start_month,
+    weekday:    match.locale_start_week_day,
   }
+}
+
+function matchesFilter(match) {
+    return match.missing_players > 0
 }
