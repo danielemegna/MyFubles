@@ -22,6 +22,7 @@ function matchesMap(match) {
     free:       match.missing_players,
     date:       match.locale_start_day + " " + match.locale_start_month,
     weekday:    match.locale_start_week_day,
+    id:         match.id,
   }
 }
 

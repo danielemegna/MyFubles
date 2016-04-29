@@ -6,6 +6,9 @@
     <link href="mobile.css" rel="stylesheet" type="text/css">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
     <script src="myfubles.js"></script>
+    <style>
+      a, a:hover { color: inherit; }
+    </style>
   </head>
   <body style="margin:0">
     <div id="skeleton">
@@ -24,7 +27,7 @@
                   <span>{{match.date}}</span>
                 </div>
                 
-                <div>
+                <a href="http://www.fubles.com/matches/{{match.id}}" target="_blank">
                   <div class="box">
                     <div class="leftPanel">
                       <div class="time">
@@ -57,8 +60,9 @@
 
                     </div>
                     <br style="clear:both">
+
                   </div>
-                </div>
+                </a>
                 <!-- ****** STOP MATCH ****** -->
 
               </div>
