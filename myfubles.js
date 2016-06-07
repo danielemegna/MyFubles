@@ -25,6 +25,7 @@ function matchesMap(match) {
     date:       match.locale_start_day + " " + match.locale_start_month,
     weekday:    match.locale_start_week_day,
     id:         match.id,
+    sport_type: match.sport_type_name_covering,
   }
 }
 
