@@ -3,7 +3,7 @@ var myFubles = angular.module("myFubles", [])
 myFubles.controller("MatchesController", function($scope, $http) {
   $scope.title = "This is My Fubles!"
 
-  var url = 'http://cors.io/?u=' +
+  var url = 'https://crossorigin.me/' +
     'https://it.fubles.com/matches/by/user/55576/near/0/0/50?sport-players=1-5'
 
   $http.get(url).success(function(data) {
