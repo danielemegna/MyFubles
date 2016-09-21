@@ -3,8 +3,8 @@ var myFubles = angular.module("myFubles", [])
 myFubles.controller("MatchesController", function($scope, $http) {
   $scope.title = "This is My Fubles!"
 
-  var url = 'https://crossorigin.me/' +
-    'https://it.fubles.com/matches/by/user/55576/near/0/0/50?sport-players=1-5'
+  var url = 'http://jsonp.afeld.me/?url=' +
+    'http://it.fubles.com/matches/by/user/55576/near/0/0/50?sport-players=1-5'
 
   $http.get(url).success(function(data) {
     $scope.matches = data.near
