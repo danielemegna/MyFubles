@@ -1,8 +1,6 @@
-#FROM debian:latest
-FROM resin/rpi-raspbian
+FROM hypriot/rpi-alpine-scratch
 
-RUN apt-get update
-RUN apt-get install -y apache2
+RUN apk update && apk add apache2
 
-WORKDIR /var/www/html
-CMD ["/usr/sbin/apache2ctl", "-D FOREGROUND"]
+WORKDIR /var/www/localhost/htdocs
+CMD ["/usr/sbin/apachectl", "-D", "FOREGROUND"]
