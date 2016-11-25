@@ -30,5 +30,8 @@ function matchesMap(match) {
 }
 
 function matchesFilter(match) {
-    return match.missing_players > 0 && !match.retracted
+    var lAmicoCharlyOnlusUserId = 13955
+    return match.missing_players > 0
+      && !match.retracted
+      && match.field.structure.id != lAmicoCharlyOnlusUserId
 }
