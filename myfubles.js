@@ -3,7 +3,7 @@ var myFubles = angular.module("myFubles", [])
 myFubles.controller("MatchesController", function($scope, $http) {
   $scope.title = "This is My Fubles!"
 
-  var url = 'http://jsonp.afeld.me/?url=' +
+  var url = 'http://' + window.location.hostname + ':8000/?url=' +
     'http://it.fubles.com/matches/by/user/55576/near/0/0/50?sport-players=1-5'
 
   $http.get(url).success(function(data) {
