@@ -1,6 +1,6 @@
-FROM hypriot/rpi-alpine-scratch
+FROM httpd
 
-RUN apk update && apk add apache2
+COPY . /usr/local/apache2/htdocs
 
-WORKDIR /var/www/localhost/htdocs
-CMD ["/usr/sbin/apachectl", "-D", "FOREGROUND"]
+WORKDIR /usr/local/apache2/htdocs
+CMD ["/usr/local/apache2/bin/httpd", "-D", "FOREGROUND"]
