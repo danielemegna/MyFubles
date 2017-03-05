@@ -13,12 +13,19 @@ myFubles.controller("MatchesController", function($scope, $http) {
   })
 })
 
+function matchesFilter(match) {
+    var lAmicoCharlyOnlusUserId = 13955
+    return match.missing_players > 0
+      && !match.retracted
+      && match.field.structure.id != lAmicoCharlyOnlusUserId
+}
+
 function matchesMap(match) {
   return {
     hour:       match.locale_start_time.split(':')[0],
     minute:     match.locale_start_time.split(':')[1],
     image:      match.owner.avatar_small,
-    km:         match.distance,
+    km:         kmFromStructure(match.field.structure),
     structure:  match.field.structure.name,
     price:      (match.price / 10).toFixed(2),
     free:       match.missing_players,
@@ -29,9 +36,21 @@ function matchesMap(match) {
   }
 }
 
-function matchesFilter(match) {
-    var lAmicoCharlyOnlusUserId = 13955
-    return match.missing_players > 0
-      && !match.retracted
-      && match.field.structure.id != lAmicoCharlyOnlusUserId
+function kmFromStructure(structure) {
+  if(structure.distance)
+    return structure.distance
+
+  const distanceMap = {
+    197: 1,
+    164: 2,
+    1370: 2.6,
+    40: 3.1,
+    17: 5.4,
+    14713: 6,
+    987: 6.1,
+    72: 7.4,
+    420: 9.7,
+  }
+  
+  return distanceMap[structure.id]
 }
