@@ -18,7 +18,7 @@
             <div class="tablet-wrapper">
               <h3 style="margin-left:10px">{{title}} - {{matches.length}} matches found</h3>
 
-              <div class="match-scheduled" ng-repeat="match in matches">
+              <div class="match-scheduled" ng-repeat="match in matches" style="opacity: {{((10-match.km)/10)+0.3}}">
 
                 <!-- ****** START MATCH ****** -->
                 <div ng-if="matches[$index-1].date != match.date" class="navigation-bar">
