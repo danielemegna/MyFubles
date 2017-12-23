@@ -15,9 +15,11 @@ myFubles.controller("MatchesController", function($scope, $http) {
 
 function matchesFilter(match) {
     var lAmicoCharlyOnlusUserId = 13955
+    var lucaTabacco = 26742
     return match.missing_players > 0
       && !match.retracted
       && match.field.structure.id != lAmicoCharlyOnlusUserId
+      && !(match.owner.id == lucaTabacco && match.missing_players == 10)
 }
 
 function matchesMap(match) {
