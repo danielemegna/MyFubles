@@ -59,6 +59,7 @@ function kmFromStructure(structure) {
     33: 6.3,
     6492: 6.6,
     91: 7,
+    46: 7.1,
     72: 7.4,
     12497: 8.5,
     420: 9.7,
