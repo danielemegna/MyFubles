@@ -21,19 +21,23 @@
               <div class="match-scheduled" ng-repeat="match in matches" style="opacity: {{((10-match.km)/10)+0.3}}">
 
                 <!-- ****** START MATCH ****** -->
-                <div ng-if="matches[$index-1].date != match.date" class="navigation-bar">
-                  <span>{{match.weekday}}</span>
+                <div ng-if="matches[$index-1].date.getDate() != match.date.getDate()" class="navigation-bar">
+                  <span>
+                    {{ match.date.toLocaleDateString('it-IT', { weekday: 'long' }) }}
+                  </span>
                   <span class="bullet-separator"></span>
-                  <span>{{match.date}}</span>
+                  <span>
+                    {{ match.date.toLocaleDateString('it-IT', { year: 'numeric', month: 'long', day: 'numeric' }) }}
+                  </span>
                 </div>
                 
                 <a href="http://www.fubles.com/matches/{{match.id}}" target="_blank">
                   <div class="box">
                     <div class="leftPanel">
                       <div class="time">
-                        <span class="hour" >{{match.hour}}</span>
+                        <span class="hour" >{{match.date.getHours()}}</span>
                         <span class="ampm" >pm</span>
-                        <span class="minutes" >.{{match.minute}}</span>
+                        <span class="minutes" >.{{('0' + match.date.getMinutes()).slice(-2)}}</span>
                       </div>
                       <img ng-src="{{match.image}}">
                     </div>
